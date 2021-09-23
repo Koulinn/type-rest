@@ -1,7 +1,11 @@
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link, withRouter } from 'react-router-dom'
+import { RouteComponentProps } from 'react-router-dom'
+import {Title} from '../Types/'
 
-const MyNav = (props) => (
+type GroupComponentsProps = RouteComponentProps & Title 
+
+const MyNav = (props:GroupComponentsProps) => (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Link to="/">
             <Navbar.Brand>{props.title}</Navbar.Brand>
